@@ -2,12 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Main</title>
 </head>
 <body>
     <h1>Hello, World!</h1>
     <p>im template</p>
-    <p><a href="/tasks/new">NEW</a></p>
+    <p><a href="{% url 'tasks:task_create' %}">NEW</a></p>
+    <p><a href="{% url 'login' %}">login</a></p>
+    <p><a href="{% url 'logout' %}">logout</a></p>
     <p>Logged in: {{ user.is_authenticated  }}</p>
 </body>
 </html>
